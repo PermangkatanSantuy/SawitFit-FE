@@ -1,4 +1,4 @@
-Branching & PR Constraint
+# Branching & PR Constraint
 - Repo bisa diakses semua member
 - Branch utama: `main` dan `dev`
 - Branch rules: fitur dibuat di feature/<nama fitur>
