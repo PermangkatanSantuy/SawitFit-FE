@@ -1,26 +1,232 @@
 @import "tailwindcss";
 
+/* ============================================
+   SawitFit Design System - Design Tokens
+   Based on Figma Design System
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========== Colors - Primary ========== */
+  --color-primary-10: #cbb5fd;
+  --color-primary-20: #ad8bfa;
+  --color-primary-30: #8b5cf6;
+  --color-primary-40: #713aed;
+  --color-primary-50: #5e28d9;
+  --color-primary: var(--color-primary-40);
+  /* Main brand color */
+
+  /* ========== Colors - Secondary (Grey Chateau) ========== */
+  --color-secondary-10: #cbd1d6;
+  --color-secondary-20: #b5bbc4;
+  --color-secondary-30: #9ca3af;
+  --color-secondary-40: #8b90a0;
+  --color-secondary-50: #787d8a;
+
+  /* ========== Colors - Success (Mountain Meadow) ========== */
+  --color-success-10: #6ee7bf;
+  --color-success-20: #34d39e;
+  --color-success-30: #10b981;
+  --color-success-40: #059666;
+  --color-success-50: #047852;
+  --color-success: var(--color-success-30);
+
+  /* ========== Colors - Danger (Coral Red) ========== */
+  --color-danger-10: #fca5a5;
+  --color-danger-20: #f87171;
+  --color-danger-30: #ef4444;
+  --color-danger-40: #8e3131;
+  --color-danger-50: #7f1d1d;
+  --color-danger: var(--color-danger-30);
+
+  /* ========== Colors - Warning (Orange Peel) ========== */
+  --color-warning-10: #fcbb4d;
+  --color-warning-20: #fbab24;
+  --color-warning-30: #f59e0b;
+  --color-warning-40: #d98b06;
+  --color-warning-50: #b47409;
+  --color-warning: var(--color-warning-30);
+
+  /* ========== Colors - Info (Azure Radiance) ========== */
+  --color-info-10: #93bbfd;
+  --color-info-20: #609afa;
+  --color-info-30: #3b82f6;
+  --color-info-40: #2570eb;
+  --color-info-50: #1d64d8;
+  --color-info: var(--color-info-30);
+
+  /* ========== Colors - Background ========== */
+  --color-bg-light: #f1f1f1;
+  --color-bg-dark: #1f1f1f;
+  --color-card: #ffffff;
+
+  /* ========== Spacing Scale ========== */
+  --spacing-tiny: 4px;
+  --spacing-small: 8px;
+  --spacing-medium-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+  --spacing-huge: 48px;
+  --spacing-massive: 64px;
+
+  /* ========== Typography - Font Sizes ========== */
+  --font-size-heading-1: 32px;
+  --font-size-heading-2: 24px;
+  --font-size-heading-3: 20px;
+  --font-size-body-large: 18px;
+  --font-size-body: 16px;
+  --font-size-body-small: 14px;
+  --font-size-caption: 12px;
+  --font-size-label: 12px;
+  --font-size-tiny: 10px;
+
+  /* ========== Default Theme (Light Mode) ========== */
+  --background: var(--color-bg-light);
+  --foreground: var(--color-bg-dark);
 }
 
 @theme inline {
+  /* ========== Tailwind Color Tokens ========== */
+
+  /* Primary Colors */
+  --color-primary-10: #cbb5fd;
+  --color-primary-20: #ad8bfa;
+  --color-primary-30: #8b5cf6;
+  --color-primary-40: #713aed;
+  --color-primary-50: #5e28d9;
+  --color-primary: var(--color-primary-40);
+
+  /* Secondary Colors */
+  --color-secondary-10: #cbd1d6;
+  --color-secondary-20: #b5bbc4;
+  --color-secondary-30: #9ca3af;
+  --color-secondary-40: #8b90a0;
+  --color-secondary-50: #787d8a;
+
+  /* Success Colors */
+  --color-success-10: #6ee7bf;
+  --color-success-20: #34d39e;
+  --color-success-30: #10b981;
+  --color-success-40: #059666;
+  --color-success-50: #047852;
+  --color-success: var(--color-success-30);
+
+  /* Danger Colors */
+  --color-danger-10: #fca5a5;
+  --color-danger-20: #f87171;
+  --color-danger-30: #ef4444;
+  --color-danger-40: #8e3131;
+  --color-danger-50: #7f1d1d;
+  --color-danger: var(--color-danger-30);
+
+  /* Warning Colors */
+  --color-warning-10: #fcbb4d;
+  --color-warning-20: #fbab24;
+  --color-warning-30: #f59e0b;
+  --color-warning-40: #d98b06;
+  --color-warning-50: #b47409;
+  --color-warning: var(--color-warning-30);
+
+  /* Info Colors */
+  --color-info-10: #93bbfd;
+  --color-info-20: #609afa;
+  --color-info-30: #3b82f6;
+  --color-info-40: #2570eb;
+  --color-info-50: #1d64d8;
+  --color-info: var(--color-info-30);
+
+  /* Background Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: #ffffff;
+
+  /* Spacing */
+  --spacing-tiny: 4px;
+  --spacing-small: 8px;
+  --spacing-medium-small: 12px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-extra-large: 32px;
+  --spacing-huge: 48px;
+  --spacing-massive: 64px;
+
+  /* Font Sizes */
+  --font-size-heading-1: 32px;
+  --font-size-heading-2: 24px;
+  --font-size-heading-3: 20px;
+  --font-size-body-large: 18px;
+  --font-size-body: 16px;
+  --font-size-body-small: 14px;
+  --font-size-caption: 12px;
+  --font-size-label: 12px;
+  --font-size-tiny: 10px;
+
+  /* Font Families */
+  --font-sans: var(--font-inter);
 }
 
+/* ========== Dark Mode ========== */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-bg-dark);
+    --foreground: var(--color-bg-light);
+    --color-card: #2a2a2a;
   }
 }
 
+/* ========== Base Styles ========== */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--font-size-body);
+}
+
+/* ========== Typography Utility Classes ========== */
+.heading-1 {
+  font-size: var(--font-size-heading-1);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: var(--font-size-heading-2);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.heading-3 {
+  font-size: var(--font-size-heading-3);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.body-large {
+  font-size: var(--font-size-body-large);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.body {
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.body-small {
+  font-size: var(--font-size-body-small);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.caption {
+  font-size: var(--font-size-caption);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.label {
+  font-size: var(--font-size-label);
+  font-weight: 500;
+  line-height: 1.4;
 }
