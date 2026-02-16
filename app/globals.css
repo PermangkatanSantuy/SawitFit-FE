@@ -59,6 +59,34 @@
   --color-bg-dark: #1f1f1f;
   --color-card: #ffffff;
 
+  /* ========== Colors - Alt Backgrounds ========== */
+  --color-bg-light-alt: #E5E4EC;
+  --color-bg-light-alt-gradient-start: #CBB5FD;
+  --color-bg-light-alt-gradient-end: #E5E4EC;
+
+  --color-bg-dark-alt: #1F1C2D;
+  --color-bg-dark-alt-gradient-start: #5E28D9;
+  --color-bg-dark-alt-gradient-end: #1F1C2D;
+
+  /* ========== Colors - Text Colors ========== */
+  /* Standard Light Mode Text */
+  --color-text-primary-light: #18181B;
+  --color-text-secondary-light: #52525B;
+  --color-text-tertiary-light: #71717A;
+
+  /* Alt Light Mode Text */
+  --color-text-heading-light-alt: #371E6B;
+  --color-text-body-light-alt: #5013A4;
+
+  /* Standard Dark Mode Text */
+  --color-text-primary-dark: #FEFCFE;
+  --color-text-secondary-dark: #D4D4D8;
+  --color-text-tertiary-dark: #A1A1AA;
+
+  /* Alt Dark Mode Text */
+  --color-text-heading-dark-alt: #E2DBFF;
+  --color-text-body-dark-alt: #ECEEF2;
+
   /* ========== Spacing Scale ========== */
   --spacing-tiny: 4px;
   --spacing-small: 8px;
@@ -83,9 +111,7 @@
   /* ========== Default Theme (Light Mode) ========== */
   --background: var(--color-bg-light);
   --foreground: var(--color-bg-dark);
-}
 
-@theme inline {
   /* ========== Tailwind Color Tokens ========== */
 
   /* Primary Colors */
@@ -150,19 +176,34 @@
   --spacing-huge: 48px;
   --spacing-massive: 64px;
 
-  /* Font Sizes */
+  /* Font Sizes - Headings */
   --font-size-heading-1: 32px;
   --font-size-heading-2: 24px;
   --font-size-heading-3: 20px;
+  --font-size-heading-4: 17px;
+  --font-size-heading-5: 15px;
+
+  /* Font Sizes - Body */
+  --font-size-body-extra-large: 20px;
   --font-size-body-large: 18px;
   --font-size-body: 16px;
   --font-size-body-small: 14px;
+  --font-size-body-extra-small: 13px;
+
+  /* Font Sizes - Small Text */
   --font-size-caption: 12px;
   --font-size-label: 12px;
   --font-size-tiny: 10px;
 
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
   /* Font Families */
   --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, monospace;
 }
 
 /* ========== Dark Mode ========== */
