@@ -60,32 +60,32 @@
   --color-card: #ffffff;
 
   /* ========== Colors - Alt Backgrounds ========== */
-  --color-bg-light-alt: #E5E4EC;
-  --color-bg-light-alt-gradient-start: #CBB5FD;
-  --color-bg-light-alt-gradient-end: #E5E4EC;
+  --color-bg-light-alt: #e5e4ec;
+  --color-bg-light-alt-gradient-start: #cbb5fd;
+  --color-bg-light-alt-gradient-end: #e5e4ec;
 
-  --color-bg-dark-alt: #1F1C2D;
-  --color-bg-dark-alt-gradient-start: #5E28D9;
-  --color-bg-dark-alt-gradient-end: #1F1C2D;
+  --color-bg-dark-alt: #1f1c2d;
+  --color-bg-dark-alt-gradient-start: #5e28d9;
+  --color-bg-dark-alt-gradient-end: #1f1c2d;
 
   /* ========== Colors - Text Colors ========== */
   /* Standard Light Mode Text */
-  --color-text-primary-light: #18181B;
-  --color-text-secondary-light: #52525B;
-  --color-text-tertiary-light: #71717A;
+  --color-text-primary-light: #18181b;
+  --color-text-secondary-light: #52525b;
+  --color-text-tertiary-light: #71717a;
 
   /* Alt Light Mode Text */
-  --color-text-heading-light-alt: #371E6B;
-  --color-text-body-light-alt: #5013A4;
+  --color-text-heading-light-alt: #371e6b;
+  --color-text-body-light-alt: #5013a4;
 
   /* Standard Dark Mode Text */
-  --color-text-primary-dark: #FEFCFE;
-  --color-text-secondary-dark: #D4D4D8;
-  --color-text-tertiary-dark: #A1A1AA;
+  --color-text-primary-dark: #fefcfe;
+  --color-text-secondary-dark: #d4d4d8;
+  --color-text-tertiary-dark: #a1a1aa;
 
   /* Alt Dark Mode Text */
-  --color-text-heading-dark-alt: #E2DBFF;
-  --color-text-body-dark-alt: #ECEEF2;
+  --color-text-heading-dark-alt: #e2dbff;
+  --color-text-body-dark-alt: #eceef2;
 
   /* ========== Spacing Scale ========== */
   --spacing-tiny: 4px;
@@ -204,14 +204,26 @@
   /* Font Families */
   --font-sans: var(--font-inter);
   --font-mono: ui-monospace, monospace;
+
+  /* Screen */
+  --screen-width-desktop: 1440px;
 }
 
 /* ========== Dark Mode ========== */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: var(--color-bg-dark);
     --foreground: var(--color-bg-light);
     --color-card: #2a2a2a;
+  }
+}
+
+/* ========== Light Mode ========== */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--color-bg-light);
+    --foreground: var(--color-bg-dark);
+    --color-card: var(--color-bg-light);
   }
 }
 
