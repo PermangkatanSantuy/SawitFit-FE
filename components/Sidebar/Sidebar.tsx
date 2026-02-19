@@ -1,7 +1,16 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
 interface WrapperProps {
   children: ReactNode;
+}
+
+interface HTTPLinks {
+  name: string;
+  href: string;
 }
 
 export default function SidebarApp() {
@@ -9,10 +18,10 @@ export default function SidebarApp() {
     <Sidebar>
       <SidebarHeader />
       <SidebarContent>
-        <SidebarGroup />
-        <SidebarGroup />
-        <SidebarGroup />
-        <SidebarGroup />
+        <SidebarGroup name="Dashboard" href="/dashboard" />
+        <SidebarGroup name="Nutrition" href="/dashboard/nutrition" />
+        <SidebarGroup name="Workout" href="/dashboard/workout" />
+        <SidebarGroup name="Social" href="/dashboard/social" />
       </SidebarContent>
     </Sidebar>
   );
@@ -35,17 +44,27 @@ export function SidebarHeader() {
 
 export function SidebarContent({ children }: WrapperProps) {
   return (
-    <div className="flex flex-col fixed items-center p-4 gap-4 h-screen bg-(--color-bg-light-alt)">
+    <nav className="flex flex-col fixed items-center p-4 gap-4 h-screen bg-(--color-bg-light-alt)">
       {children}
-    </div>
+    </nav>
   );
 }
 
-export function SidebarGroup() {
+export function SidebarGroup({ name, href }: HTTPLinks) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
   return (
-    <div className="flex flex-row items-center justify-start gap-(--spacing-tiny) w-full px-5 py-2 bg-(--color-bg-light)">
-      <div className="w-10 h-10 bg-(--color-bg-light-alt)"></div>
-      <div className="w-40 h-4 bg-(--color-bg-light-alt)"></div>
-    </div>
+    <Link
+      href={href}
+      className={`flex flex-row items-center justify-start gap-(--spacing-tiny) w-full px-5 py-2 ${
+        isActive
+          ? "border-(--color-bg-light) border-3"
+          : "bg-(--color-bg-light)"
+      }`}
+    >
+      <div className={`w-10 h-10 ${isActive ? "bg-white" : "bg-gray-300"}`} />
+      <div className={`w-40 h-4 ${isActive ? "bg-white" : "bg-gray-300"}`} />
+    </Link>
   );
 }
