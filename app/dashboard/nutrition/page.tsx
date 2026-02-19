@@ -1,9 +1,9 @@
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import SidebarApp from "../../../components/Sidebar/Sidebar";
 
 export default function Nutrition() {
   return (
     <>
-      <Sidebar />
+      <SidebarApp />
       <div className="">
         <main className=""></main>
       </div>
