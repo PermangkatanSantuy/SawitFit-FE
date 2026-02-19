@@ -28,7 +28,11 @@ export default function SidebarApp() {
 }
 
 export function Sidebar({ children }: WrapperProps) {
-  return <div>{children}</div>;
+  return (
+    <div className="min-h-screen min-w-0 bg-(--color-bg-light-alt)">
+      {children}
+    </div>
+  );
 }
 
 export function SidebarHeader() {
@@ -44,7 +48,7 @@ export function SidebarHeader() {
 
 export function SidebarContent({ children }: WrapperProps) {
   return (
-    <nav className="flex flex-col items-center p-4 gap-4 h-screen bg-(--color-bg-light-alt)">
+    <nav className="flex flex-col items-center p-4 gap-4 bg-(--color-bg-light-alt)">
       {children}
     </nav>
   );
