@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Login() {
   return (
     <div className="flex max-h-screen max-w-(--screen-width-desktop) items-center justify-center font-inter m-auto ">
-      <main className="flex flex-row h-screen w-full p-(--spacing-huge) flex-col items-center justify-between bg-white text-black">
+      <main className="flex h-screen w-full p-(--spacing-huge) flex-col items-center justify-between bg-white text-black">
         <div className="h-full w-7/12 bg-(--color-bg-light-alt)">Hai</div>
         <div className="flex flex-col p-8 pl-22 items-center justify-center w-5/12 gap-(--spacing-extra-large) text-(--color-bg-light-alt)">
           <Image

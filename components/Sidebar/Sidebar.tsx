@@ -8,7 +8,7 @@ interface WrapperProps {
   children: ReactNode;
 }
 
-interface HTTPLinks {
+interface SidebarGroupProps {
   name: string;
   href: string;
 }
@@ -44,13 +44,13 @@ export function SidebarHeader() {
 
 export function SidebarContent({ children }: WrapperProps) {
   return (
-    <nav className="flex flex-col fixed items-center p-4 gap-4 h-screen bg-(--color-bg-light-alt)">
+    <nav className="flex flex-col items-center p-4 gap-4 h-screen bg-(--color-bg-light-alt)">
       {children}
     </nav>
   );
 }
 
-export function SidebarGroup({ name, href }: HTTPLinks) {
+export function SidebarGroup({ name, href }: SidebarGroupProps) {
   const pathname = usePathname();
   const isActive = pathname === href;
 
