@@ -1,8 +1,12 @@
-import SidebarApp from "../../../components/Sidebar/Sidebar";
+"use client";
 
-export default function Nutrition() {
+import PageLayout from "@/components/PageLayout/PageLayout";
+import SidebarApp from "@/components/Sidebar/Sidebar";
+import Link from "next/link";
+
+export default function NutritionPage() {
   return (
-    <div className="grid grid-cols-[max-content_1fr] overflow-hidden">
+    <PageLayout>
       <SidebarApp />
       <div className="max-h-screen min-w-0 items-center justify-center font-inter text-(--color-secondary-40) overflow-y-auto">
         <main className="flex flex-col gap-(--spacing-medium) min-w-0 p-(--spacing-massive) items-start">
@@ -71,10 +75,13 @@ export default function Nutrition() {
                 <div className="w-24 h-1 bg-(--color-secondary-40)"></div>
               </div>
 
-              <div className="flex items-center justify-center py-(--spacing-medium) w-full border-dashed border-2">
+              <Link
+                href="nutrition/add?meal=breakfast"
+                className="flex items-center justify-center py-(--spacing-medium) w-full border-dashed border-2"
+              >
                 <h2 className="heading-2">+</h2>
                 <p>Add Food</p>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -121,6 +128,6 @@ export default function Nutrition() {
           </div>
         </main>
       </div>
-    </div>
+    </PageLayout>
   );
 }

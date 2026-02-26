@@ -20,7 +20,7 @@ export default function SidebarApp() {
       <SidebarContent>
         <SidebarGroup name="Dashboard" href="/dashboard" />
         <SidebarGroup name="Nutrition" href="/dashboard/nutrition" />
-        <SidebarGroup name="Workout" href="/dashboard/workout" />
+        <SidebarGroup name="Progress" href="/dashboard/progress" />
         <SidebarGroup name="Social" href="/dashboard/social" />
       </SidebarContent>
     </Sidebar>
