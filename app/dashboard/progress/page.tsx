@@ -22,9 +22,9 @@ export default function ProgressPage() {
                 </div>
                 <h2 className="heading-2">Progress</h2>
               </div>
-              <h2 className="font-(--font-size-body-bold) font-(--font-weight-bold) text-(--color-bg-light) px-(--spacing-medium) py-(--spacing-small) bg-(--color-secondary-40)">
-                + Add Entry
-              </h2>
+              <div className="font-(--font-weight-bold) text-(--color-bg-light) px-(--spacing-medium) py-(--spacing-small) bg-(--color-secondary-40)">
+                <p className="font-(--font-size-body-bold)">+ Add Entry</p>
+              </div>
             </nav>
             <div className="flex flex-row gap-(--spacing-small)">
               <h2 className="font-(--font-size-body-bold) font-(--font-weight-bold) px-(--spacing-medium) py-(--spacing-small) border-2 border-(--color-secondary-40)">
@@ -40,7 +40,7 @@ export default function ProgressPage() {
           </div>
           <div className="flex flex-col gap-(--spacing-medium-large)">
             <h3 className="heading-3">Entry</h3>
-            <div className="flex flex-col gap-(--spacing-small)">
+            <div className="flex flex-col">
               <ListEntry
                 day="Wednesday"
                 date="19 Feb 2025"

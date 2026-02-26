@@ -38,7 +38,7 @@ export function Sidebar({ children }: WrapperProps) {
 export function SidebarHeader() {
   return (
     <div className="flex bg-(--color-bg-light)">
-      <div className="flex flex-row items-center justify-start gap-(--spacing-tiny) w-full px-5 py-2 bg-(--color-bg-light)">
+      <div className="flex flex-row items-center justify-start gap-(--spacing-tiny) w-full px-5 py-(--spacing-medium) bg-(--color-bg-light)">
         <div className="w-10 h-10 bg-(--color-bg-light-alt)"></div>
         <div className="w-40 h-4 bg-(--color-bg-light-alt)"></div>
       </div>
